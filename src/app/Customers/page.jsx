@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Header/header";
 import { GoPlus } from "react-icons/go";
 import { CiSearch } from "react-icons/ci";
-import Footer from "../Footer/page";
 export default function page() {
   const [customers, setCustomers] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
@@ -193,7 +192,6 @@ export default function page() {
           </div>
         )}
       </div>
-      <Footer />
     </div>
   );
 }
