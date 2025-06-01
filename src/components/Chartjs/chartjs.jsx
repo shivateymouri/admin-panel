@@ -15,7 +15,6 @@ import {
 
 import { Bar, Pie } from "react-chartjs-2";
 
-// Register chart elements
 ChartJS.register(
   BarElement,
   ArcElement,
@@ -24,93 +23,83 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-export default function chartjs() {
+
+export default function Chartjs() {
   const barData = {
-    labels: [
-      "JAN",
-      "FEB",
-      "MAR",
-      "APR",
-      "MAY",
-      "JUN",
-      "JUL",
-      "AUG",
-      "SEP",
-      "OCT",
-      "NOV",
-      "DEC",
-    ],
-    datasets: [
-      {
-        label: "Sales",
-        data: [12, 19, 3, 5, 2, 3, 15, 13, 14, 17, 10, 16],
-        backgroundColor: "rgb(25, 60, 184)",
-        borderRadius: 5,
-        barThickness: 20,
-      },
-    ],
+    labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+    datasets: [{
+      label: "Sales",
+      data: [12, 19, 3, 5, 2, 3, 15, 13, 14, 17, 10, 16],
+      backgroundColor: "rgb(25, 60, 184)",
+      borderRadius: 5,
+      barThickness: 20,
+    }],
   };
 
   const pieData = {
-    datasets: [
-      {
-        label: "رای‌ها",
-        data: [300, 50, 100],
-        backgroundColor: [
-          "rgb(25, 60, 184)",
-          "rgb(255, 105, 0)",
-          "rgb(0, 201, 81)",
-        ],
-        borderWidth: 1,
-      },
-    ],
+    datasets: [{
+      label: "رای‌ها",
+      data: [300, 50, 100],
+      backgroundColor: ["rgb(25, 60, 184)", "rgb(255, 105, 0)", "rgb(0, 201, 81)"],
+      borderWidth: 1,
+    }],
   };
+
   const pieOptions = {
-    responsive: false,
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: "bottom",
       },
     },
   };
+
   const barOptions = {
     responsive: true,
+    maintainAspectRatio: false,
     scales: {
       y: {
-        beginAtZero: true, // شروع از صفر
-        max: 20,          // حداکثر مقدار محور
+        beginAtZero: true,
+        max: 20,
         ticks: {
-          stepSize: 2,    // فاصله بین اعداد
+          stepSize: 2,
           callback: function (value) {
-            return `${value}K`; // افزودن پسوند
+            return `${value}K`;
           },
         },
       },
     },
   };
-  
+
+
   return (
-    <div className="w-full text-xl flex p-1 lg:p-3 mt-10 lg:flex-row flex-col justify-center items-center gap-5 *:border-1 *:border-gray-700 *:w-[90%] *:rounded-md font-sans">
-      <div className="lg:w-2/3 flex flex-col justify-center items-center">
+    <div className="w-full flex flex-col lg:flex-row justify-center items-stretch gap-5 mt-8 px-2 text-white">
+      <div className="lg:w-2/3 w-full bg-[#1f1f1f] border border-gray-700 rounded-md p-4 min-h-[680px]">
         <Bar data={barData} options={barOptions} />
       </div>
-      <div className="lg:w-1/3 lg:min-h-[622px] flex flex-col justify-center items-center *:p-5">
-        <Pie data={pieData} options={pieOptions} width={350} height={350} />
-        <div className="w-full flex justify-center gap-5 items-center *:w-1/6 *:flex *:flex-col *:justify-center *:items-center *:gap-3">
-          <div>
-            <span><IoIosDesktop /></span>
+
+      <div className="lg:w-1/3 w-full bg-[#1f1f1f] border border-gray-700 rounded-md p-4 min-h-[680px] flex flex-col justify-between">
+        <div className="flex-grow flex justify-center items-center">
+          <div className="w-full h-[300px]">
+            <Pie data={pieData} options={pieOptions} />
+          </div>
+        </div>
+        <div className="flex justify-around items-center mt-4 text-sm text-gray-300">
+          <div className="flex flex-col items-center gap-1">
+            <IoIosDesktop className="text-2xl text-blue-500" />
             <span>Desktop</span>
-            <span>63%</span>
+            <span className="text-blue-400">63%</span>
           </div>
-          <div>
-            <span><PiDeviceTabletLight /></span>
+          <div className="flex flex-col items-center gap-1">
+            <PiDeviceTabletLight className="text-2xl text-orange-400" />
             <span>Tablet</span>
-            <span>15%</span>
+            <span className="text-orange-300">15%</span>
           </div>
-          <div>
-            <span><FaPhoneAlt /></span>
+          <div className="flex flex-col items-center gap-1">
+            <FaPhoneAlt className="text-2xl text-green-400" />
             <span>Phone</span>
-            <span>22%</span>
+            <span className="text-green-300">22%</span>
           </div>
         </div>
       </div>

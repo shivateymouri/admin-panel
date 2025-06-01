@@ -20,22 +20,22 @@ export default function page() {
               <h5 className='font-bold text-[20px]'>Email</h5>
                 <div>
                 <input type="checkbox"  id="ProductUpdates" name="ProductUpdates"/>
-                <label className='text-gray-400' for="productUpdates"> Product Updates</label>
+                <label className='text-gray-400' htmlFor="productUpdates"> Product Updates</label>
                 </div>
                 <div>
                 <input type="checkbox"  id="security" name="security"/>
-                <label className='text-gray-400' for="security"> Security updates</label>
+                <label className='text-gray-400' htmlFor="security"> Security updates</label>
                 </div>
               </div>
               <div className="lg:w-1/2 w-full flex flex-col justify-center gap-3 items-center p-2 *:w-full *:p-3">
                 <h5 className='font-bold text-[20px]'>Phone</h5>
                 <div>
                 <input type="checkbox"  id="Email" name="Email"/>
-                <label className='text-gray-400' for="Email"> Email</label>
+                <label className='text-gray-400' htmlFor="Email"> Email</label>
                 </div>
                 <div>
                 <input type="checkbox"  id="securitytwo" name="securitytwo"/>
-                <label className='text-gray-400' for="securitytwo"> Security updates</label>
+                <label className='text-gray-400' htmlFor="securitytwo"> Security updates</label>
                 </div>
               </div>
             </div>
