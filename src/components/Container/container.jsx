@@ -50,7 +50,7 @@ export default function container() {
 
           <div className="bg-[#1f1f1f] sm:w-[47%] lg:w-[23%] w-full rounded-md border border-gray-700">
             <div className="flex justify-between items-center p-5">
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-5">
                 <h5 className="font-bold text-[16px] text-blue-800">
                   TASK PROGRESS
                 </h5>
@@ -60,7 +60,7 @@ export default function container() {
                 <TfiMenuAlt size={20} />
               </div>
             </div>
-            <div className="px-5 pb-5">
+            <div className="px-5 pb-10">
               <div className="w-full flex items-center">
                 <div className="bg-blue-800 h-2 w-2/3 rounded-l-full"></div>
                 <div className="bg-blue-200 h-2 w-1/3 rounded-r-full"></div>
@@ -80,9 +80,7 @@ export default function container() {
                 <PiNewspaperClippingLight size={20} />
               </div>
             </div>
-            <div className="p-5 text-black text-lg flex justify-center items-center gap-1">
-              <span>.</span>
-              <span>.</span>
+            <div className="p-3 text-[#1f1f1f] text-lg flex justify-center items-center gap-1">
               <span>.</span>
             </div>
           </div>
