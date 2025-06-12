@@ -14,7 +14,7 @@ export default function account() {
   }, []);
 
   return (
-    <div className="font-sans text-xl">
+    <div className="font-sans text-xl bg-black">
       <Header />
       <div className="w-full flex flex-col justify-center items-center gap-3 p-3">
         <div className="w-full p-3 flex flex-col justify-center items-start gap-3">

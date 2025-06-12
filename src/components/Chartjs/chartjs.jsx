@@ -74,7 +74,7 @@ export default function Chartjs() {
 
 
   return (
-    <div className="w-full flex flex-col lg:flex-row justify-center items-stretch gap-5 mt-8 px-2 text-white">
+    <div className="w-full bg-black flex flex-col lg:flex-row justify-center items-stretch gap-5 mt-8 px-2 text-white">
       <div className="lg:w-2/3 w-full bg-[#1f1f1f] border border-gray-700 rounded-md p-4 min-h-[680px]">
         <Bar data={barData} options={barOptions} />
       </div>

@@ -13,12 +13,12 @@ export default function page() {
           alt="dev"
         />
         <div className="flex flex-col justify-center items-center gap-3 p-3">
-          <p className="text-white animate-bounce">
+          <p className="text-gray-500 animate-bounce">
             Developed by Shiva Teymouri
           </p>
           <div className="flex gap-3">
             <a
-              className="text-white text-[20px]"
+              className="text-gray-500 text-[20px]"
               href="https://www.instagram.com/shivateymouri.dev?igsh=MXh3NXBhMjhsZ2tiYg=="
             >
               <FaInstagram />

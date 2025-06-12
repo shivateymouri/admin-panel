@@ -11,7 +11,7 @@ export default function container() {
   return (
     <div>
       <Header />
-      <div className="text-white font-sans text-xl overflow-y-hidden">
+      <div className="text-white font-sans text-xl overflow-y-hidden bg-black">
         <div className="w-full flex flex-wrap justify-around gap-5 mt-8 px-2">
           <div className="bg-[#1f1f1f] sm:w-[47%] lg:w-[23%] w-full rounded-md border border-gray-700">
             <div className="flex justify-between items-center p-5">
