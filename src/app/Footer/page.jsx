@@ -24,7 +24,7 @@ export default function page() {
               <FaInstagram />
             </a>
             <a
-              className="text-white text-[20px]"
+              className="text-gray-500 text-[20px]"
               href="http://www.linkedin.com/in/shiva-teymoori"
             >
               <CiLinkedin />
